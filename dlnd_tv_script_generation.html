@@ -11783,7 +11783,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[73]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -11813,7 +11813,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">view_sentence_range</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
@@ -11902,7 +11902,7 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -11978,7 +11978,7 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">token_lookup</span><span class="p">():</span>
@@ -12041,7 +12041,7 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[77]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12067,7 +12067,7 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12104,7 +12104,7 @@ Barney_Gumble: Yeah, you should only drink to enhance your social skills.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[79]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12166,7 +12166,7 @@ Default GPU Device: /device:GPU:0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[80]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_inputs</span><span class="p">():</span>
@@ -12231,7 +12231,7 @@ Default GPU Device: /device:GPU:0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[81]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_init_cell</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">rnn_size</span><span class="p">):</span>
@@ -12244,7 +12244,8 @@ Default GPU Device: /device:GPU:0
     <span class="c1"># TODO: Implement Function</span>
     
     <span class="n">lstm</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">BasicLSTMCell</span><span class="p">(</span><span class="n">rnn_size</span><span class="p">)</span>
-    <span class="n">cell</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">MultiRNNCell</span><span class="p">([</span><span class="n">lstm</span><span class="p">]</span><span class="o">*</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">drop</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">DropoutWrapper</span><span class="p">(</span><span class="n">lstm</span><span class="p">,</span> <span class="n">output_keep_prob</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+    <span class="n">cell</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">MultiRNNCell</span><span class="p">([</span><span class="n">drop</span><span class="p">]</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
     <span class="n">initial_state</span> <span class="o">=</span> <span class="n">cell</span><span class="o">.</span><span class="n">zero_state</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
     
     <span class="n">initialstate</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">identity</span><span class="p">(</span><span class="n">initial_state</span><span class="p">,</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;initial_state&#39;</span><span class="p">)</span>
@@ -12292,7 +12293,7 @@ Default GPU Device: /device:GPU:0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_embed</span><span class="p">(</span><span class="n">input_data</span><span class="p">,</span> <span class="n">vocab_size</span><span class="p">,</span> <span class="n">embed_dim</span><span class="p">):</span>
@@ -12356,7 +12357,7 @@ Default GPU Device: /device:GPU:0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[83]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">build_rnn</span><span class="p">(</span><span class="n">cell</span><span class="p">,</span> <span class="n">inputs</span><span class="p">):</span>
@@ -12418,7 +12419,7 @@ Default GPU Device: /device:GPU:0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[84]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">build_nn</span><span class="p">(</span><span class="n">cell</span><span class="p">,</span> <span class="n">rnn_size</span><span class="p">,</span> <span class="n">input_data</span><span class="p">,</span> <span class="n">vocab_size</span><span class="p">,</span> <span class="n">embed_dim</span><span class="p">):</span>
@@ -12519,7 +12520,7 @@ Tests Passed
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_batches</span><span class="p">(</span><span class="n">int_text</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">,</span> <span class="n">seq_length</span><span class="p">):</span>
@@ -12532,30 +12533,41 @@ Tests Passed
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># TODO: Implement Function</span>
     
-    <span class="n">int_text</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">int_text</span><span class="p">)</span>
-    <span class="n">chars_per_batch</span> <span class="o">=</span> <span class="n">batch_size</span> <span class="o">*</span> <span class="n">seq_length</span>
-    <span class="n">n_batches</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">int_text</span><span class="p">)</span><span class="o">//</span><span class="n">chars_per_batch</span>
+    <span class="c1">#int_text = np.array(int_text)</span>
+    <span class="c1">#chars_per_batch = batch_size * seq_length</span>
+    <span class="c1">#n_batches = len(int_text)//chars_per_batch</span>
     
-    <span class="n">int_text</span> <span class="o">=</span> <span class="n">int_text</span><span class="p">[:</span><span class="n">n_batches</span> <span class="o">*</span> <span class="n">chars_per_batch</span><span class="p">]</span>
+<span class="c1">#     int_text = int_text[:n_batches * chars_per_batch]</span>
     
-    <span class="n">int_text</span> <span class="o">=</span> <span class="n">int_text</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">batch_size</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+<span class="c1">#     int_text = int_text.reshape((batch_size,-1))</span>
     
-    <span class="n">batches_final</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1">#     batches_final = []</span>
      
-    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">int_text</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">seq_length</span><span class="p">):</span>
-        <span class="n">batches</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">int_text</span><span class="p">[:,</span><span class="n">n</span><span class="p">:</span><span class="n">n</span><span class="o">+</span><span class="n">seq_length</span><span class="p">]</span>
-        <span class="n">y_temp</span> <span class="o">=</span> <span class="n">int_text</span><span class="p">[:,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span><span class="o">+</span><span class="n">seq_length</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+<span class="c1">#     for n in range(0, int_text.shape[1], seq_length):</span>
+<span class="c1">#         batches = []</span>
+<span class="c1">#         x = int_text[:,n:n+seq_length]</span>
+<span class="c1">#         y_temp = int_text[:, n+1:n+seq_length+1]</span>
         
-        <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
-        <span class="n">y</span><span class="p">[:,:</span><span class="n">y_temp</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span> <span class="o">=</span> <span class="n">y_temp</span>
+<span class="c1">#         y = np.zeros(x.shape, dtype=x.dtype)</span>
+<span class="c1">#         y[:,:y_temp.shape[1]] = y_temp</span>
         
-        <span class="n">batches</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-        <span class="n">batches</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-        <span class="n">batches_final</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">batches</span><span class="p">)</span>
-        
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">batches_final</span><span class="p">)</span>
+<span class="c1">#         batches.append(x)</span>
+<span class="c1">#         batches.append(y)</span>
+<span class="c1">#         batches_final.append(batches)        </span>
+<span class="c1">#     return np.array(batches_final)</span>
 
+    <span class="n">chars_per_batch</span> <span class="o">=</span> <span class="n">batch_size</span> <span class="o">*</span> <span class="n">seq_length</span>
+    <span class="n">n_batches</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">int_text</span><span class="p">)</span> <span class="o">/</span> <span class="n">chars_per_batch</span><span class="p">)</span>
+    <span class="n">x_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">int_text</span><span class="p">[:</span><span class="n">n_batches</span> <span class="o">*</span> <span class="n">chars_per_batch</span><span class="p">])</span>
+    <span class="n">y_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">int_text</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="n">n_batches</span> <span class="o">*</span> <span class="n">chars_per_batch</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span>
+    <span class="n">y_data</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">x_data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    
+    <span class="n">x_batches</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">x_data</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">n_batches</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">y_batches</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">y_data</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">n_batches</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="n">x_batches</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">x_batches</span><span class="p">,</span><span class="n">y_batches</span><span class="p">)))</span>
 
 <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">DON&#39;T MODIFY ANYTHING IN THIS CELL THAT IS BELOW THIS LINE</span>
@@ -12577,7 +12589,8 @@ Tests Passed
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Tests Passed
+<pre>(128, 5)
+Tests Passed
 </pre>
 </div>
 </div>
@@ -12606,21 +12619,21 @@ Tests Passed
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[86]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Number of Epochs</span>
-<span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="c1"># Batch Size</span>
-<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="c1"># RNN Size</span>
-<span class="n">rnn_size</span> <span class="o">=</span> <span class="mi">256</span>
+<span class="n">rnn_size</span> <span class="o">=</span> <span class="mi">128</span>
 <span class="c1"># Embedding Dimension Size</span>
-<span class="n">embed_dim</span> <span class="o">=</span> <span class="mi">300</span>
+<span class="n">embed_dim</span> <span class="o">=</span> <span class="mi">128</span>
 <span class="c1"># Sequence Length</span>
 <span class="n">seq_length</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="c1"># Learning Rate</span>
-<span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.01</span>
+<span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.001</span>
 <span class="c1"># Show stats for every n number of batches</span>
 <span class="n">show_every_n_batches</span> <span class="o">=</span> <span class="mi">100</span>
 
@@ -12646,7 +12659,7 @@ Tests Passed
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12657,12 +12670,14 @@ Tests Passed
 <span class="n">train_graph</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
 <span class="k">with</span> <span class="n">train_graph</span><span class="o">.</span><span class="n">as_default</span><span class="p">():</span>
     <span class="n">vocab_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">int_to_vocab</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">vocab_size</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">int_text</span><span class="p">))</span>
     <span class="n">input_text</span><span class="p">,</span> <span class="n">targets</span><span class="p">,</span> <span class="n">lr</span> <span class="o">=</span> <span class="n">get_inputs</span><span class="p">()</span>
     <span class="n">input_data_shape</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">input_text</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;input_text : &quot;</span><span class="p">,</span><span class="n">input_text</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;rnn_size : &quot;</span><span class="p">,</span><span class="n">rnn_size</span><span class="p">)</span>
     <span class="n">cell</span><span class="p">,</span> <span class="n">initial_state</span> <span class="o">=</span> <span class="n">get_init_cell</span><span class="p">(</span><span class="n">input_data_shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">rnn_size</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;initial_state : &quot;</span><span class="p">,</span><span class="n">initial_state</span><span class="p">)</span>
     <span class="n">logits</span><span class="p">,</span> <span class="n">final_state</span> <span class="o">=</span> <span class="n">build_nn</span><span class="p">(</span><span class="n">cell</span><span class="p">,</span> <span class="n">rnn_size</span><span class="p">,</span> <span class="n">input_text</span><span class="p">,</span> <span class="n">vocab_size</span><span class="p">,</span> <span class="n">embed_dim</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;logits : &quot;</span><span class="p">,</span><span class="n">logits</span><span class="p">)</span>
 
     <span class="c1"># Probabilities for generating words</span>
     <span class="n">probs</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">softmax</span><span class="p">(</span><span class="n">logits</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;probs&#39;</span><span class="p">)</span>
@@ -12696,10 +12711,12 @@ Tests Passed
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>initial_state :  Tensor(&#34;initial_state:0&#34;, shape=(1, 2, ?, 256), dtype=float32)
-(?, ?, 256)
+<pre>6780
+69101
+input_text :  Tensor(&#34;input:0&#34;, shape=(?, ?), dtype=int32)
+rnn_size :  128
+(?, ?, 128)
 (?, ?, 6780)
-logits :  Tensor(&#34;fully_connected/Sigmoid:0&#34;, shape=(?, ?, 6780), dtype=float32)
 </pre>
 </div>
 </div>
@@ -12719,7 +12736,7 @@ logits :  Tensor(&#34;fully_connected/Sigmoid:0&#34;, shape=(?, ?, 6780), dtype=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[88]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12768,168 +12785,16 @@ logits :  Tensor(&#34;fully_connected/Sigmoid:0&#34;, shape=(?, ?, 6780), dtype=
 <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">InternalError</span>                             Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">~\Anaconda3\envs\dog-project\lib\site-packages\tensorflow\python\client\session.py</span> in <span class="ansi-cyan-fg">_do_call</span><span class="ansi-blue-intense-fg ansi-bold">(self, fn, *args)</span>
-<span class="ansi-green-fg">   1321</span>     <span class="ansi-green-intense-fg ansi-bold">try</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-intense-fg ansi-bold">-&gt; 1322</span><span class="ansi-yellow-intense-fg ansi-bold">       </span><span class="ansi-green-intense-fg ansi-bold">return</span> fn<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">*</span>args<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">   1323</span>     <span class="ansi-green-intense-fg ansi-bold">except</span> errors<span class="ansi-yellow-intense-fg ansi-bold">.</span>OpError <span class="ansi-green-intense-fg ansi-bold">as</span> e<span class="ansi-yellow-intense-fg ansi-bold">:</span>
-
-<span class="ansi-green-intense-fg ansi-bold">~\Anaconda3\envs\dog-project\lib\site-packages\tensorflow\python\client\session.py</span> in <span class="ansi-cyan-fg">_run_fn</span><span class="ansi-blue-intense-fg ansi-bold">(feed_dict, fetch_list, target_list, options, run_metadata)</span>
-<span class="ansi-green-fg">   1306</span>       return self._call_tf_sessionrun(
-<span class="ansi-green-intense-fg ansi-bold">-&gt; 1307</span><span class="ansi-yellow-intense-fg ansi-bold">           options, feed_dict, fetch_list, target_list, run_metadata)
-</span><span class="ansi-green-fg">   1308</span> 
-
-<span class="ansi-green-intense-fg ansi-bold">~\Anaconda3\envs\dog-project\lib\site-packages\tensorflow\python\client\session.py</span> in <span class="ansi-cyan-fg">_call_tf_sessionrun</span><span class="ansi-blue-intense-fg ansi-bold">(self, options, feed_dict, fetch_list, target_list, run_metadata)</span>
-<span class="ansi-green-fg">   1408</span>           self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_session<span class="ansi-yellow-intense-fg ansi-bold">,</span> options<span class="ansi-yellow-intense-fg ansi-bold">,</span> feed_dict<span class="ansi-yellow-intense-fg ansi-bold">,</span> fetch_list<span class="ansi-yellow-intense-fg ansi-bold">,</span> target_list<span class="ansi-yellow-intense-fg ansi-bold">,</span>
-<span class="ansi-green-intense-fg ansi-bold">-&gt; 1409</span><span class="ansi-yellow-intense-fg ansi-bold">           run_metadata)
-</span><span class="ansi-green-fg">   1410</span>     <span class="ansi-green-intense-fg ansi-bold">else</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-
-<span class="ansi-red-intense-fg ansi-bold">InternalError</span>: Blas GEMM launch failed : a.shape=(10, 556), b.shape=(556, 1024), m=10, n=1024, k=556
-	 [[Node: rnn/while/rnn/multi_rnn_cell/cell_0/basic_lstm_cell/MatMul = MatMul[T=DT_FLOAT, transpose_a=false, transpose_b=false, _device=&#34;/job:localhost/replica:0/task:0/device:GPU:0&#34;](rnn/while/rnn/multi_rnn_cell/cell_0/basic_lstm_cell/concat, rnn/while/rnn/multi_rnn_cell/cell_0/basic_lstm_cell/MatMul/Enter)]]
-	 [[Node: sequence_loss/truediv/_53 = _Recv[client_terminated=false, recv_device=&#34;/job:localhost/replica:0/task:0/device:CPU:0&#34;, send_device=&#34;/job:localhost/replica:0/task:0/device:GPU:0&#34;, send_device_incarnation=1, tensor_name=&#34;edge_1091_sequence_loss/truediv&#34;, tensor_type=DT_FLOAT, _device=&#34;/job:localhost/replica:0/task:0/device:CPU:0&#34;]()]]
-
-During handling of the above exception, another exception occurred:
-
-<span class="ansi-red-intense-fg ansi-bold">InternalError</span>                             Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-46-39ad1111000c&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
-<span class="ansi-green-fg">     16</span>                 initial_state<span class="ansi-yellow-intense-fg ansi-bold">:</span> state<span class="ansi-yellow-intense-fg ansi-bold">,</span>
-<span class="ansi-green-fg">     17</span>                 lr: learning_rate}
-<span class="ansi-green-intense-fg ansi-bold">---&gt; 18</span><span class="ansi-yellow-intense-fg ansi-bold">             </span>train_loss<span class="ansi-yellow-intense-fg ansi-bold">,</span> state<span class="ansi-yellow-intense-fg ansi-bold">,</span> _ <span class="ansi-yellow-intense-fg ansi-bold">=</span> sess<span class="ansi-yellow-intense-fg ansi-bold">.</span>run<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">[</span>cost<span class="ansi-yellow-intense-fg ansi-bold">,</span> final_state<span class="ansi-yellow-intense-fg ansi-bold">,</span> train_op<span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> feed<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">     19</span> 
-<span class="ansi-green-fg">     20</span>             <span class="ansi-red-intense-fg ansi-bold"># Show every &lt;show_every_n_batches&gt; batches</span>
-
-<span class="ansi-green-intense-fg ansi-bold">~\Anaconda3\envs\dog-project\lib\site-packages\tensorflow\python\client\session.py</span> in <span class="ansi-cyan-fg">run</span><span class="ansi-blue-intense-fg ansi-bold">(self, fetches, feed_dict, options, run_metadata)</span>
-<span class="ansi-green-fg">    898</span>     <span class="ansi-green-intense-fg ansi-bold">try</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">    899</span>       result = self._run(None, fetches, feed_dict, options_ptr,
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 900</span><span class="ansi-yellow-intense-fg ansi-bold">                          run_metadata_ptr)
-</span><span class="ansi-green-fg">    901</span>       <span class="ansi-green-intense-fg ansi-bold">if</span> run_metadata<span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">    902</span>         proto_data <span class="ansi-yellow-intense-fg ansi-bold">=</span> tf_session<span class="ansi-yellow-intense-fg ansi-bold">.</span>TF_GetBuffer<span class="ansi-yellow-intense-fg ansi-bold">(</span>run_metadata_ptr<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-green-intense-fg ansi-bold">~\Anaconda3\envs\dog-project\lib\site-packages\tensorflow\python\client\session.py</span> in <span class="ansi-cyan-fg">_run</span><span class="ansi-blue-intense-fg ansi-bold">(self, handle, fetches, feed_dict, options, run_metadata)</span>
-<span class="ansi-green-fg">   1133</span>     <span class="ansi-green-intense-fg ansi-bold">if</span> final_fetches <span class="ansi-green-intense-fg ansi-bold">or</span> final_targets <span class="ansi-green-intense-fg ansi-bold">or</span> <span class="ansi-yellow-intense-fg ansi-bold">(</span>handle <span class="ansi-green-intense-fg ansi-bold">and</span> feed_dict_tensor<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">   1134</span>       results = self._do_run(handle, final_targets, final_fetches,
-<span class="ansi-green-intense-fg ansi-bold">-&gt; 1135</span><span class="ansi-yellow-intense-fg ansi-bold">                              feed_dict_tensor, options, run_metadata)
-</span><span class="ansi-green-fg">   1136</span>     <span class="ansi-green-intense-fg ansi-bold">else</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">   1137</span>       results <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-yellow-intense-fg ansi-bold">]</span>
-
-<span class="ansi-green-intense-fg ansi-bold">~\Anaconda3\envs\dog-project\lib\site-packages\tensorflow\python\client\session.py</span> in <span class="ansi-cyan-fg">_do_run</span><span class="ansi-blue-intense-fg ansi-bold">(self, handle, target_list, fetch_list, feed_dict, options, run_metadata)</span>
-<span class="ansi-green-fg">   1314</span>     <span class="ansi-green-intense-fg ansi-bold">if</span> handle <span class="ansi-green-intense-fg ansi-bold">is</span> <span class="ansi-green-intense-fg ansi-bold">None</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">   1315</span>       return self._do_call(_run_fn, feeds, fetches, targets, options,
-<span class="ansi-green-intense-fg ansi-bold">-&gt; 1316</span><span class="ansi-yellow-intense-fg ansi-bold">                            run_metadata)
-</span><span class="ansi-green-fg">   1317</span>     <span class="ansi-green-intense-fg ansi-bold">else</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">   1318</span>       <span class="ansi-green-intense-fg ansi-bold">return</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_do_call<span class="ansi-yellow-intense-fg ansi-bold">(</span>_prun_fn<span class="ansi-yellow-intense-fg ansi-bold">,</span> handle<span class="ansi-yellow-intense-fg ansi-bold">,</span> feeds<span class="ansi-yellow-intense-fg ansi-bold">,</span> fetches<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-green-intense-fg ansi-bold">~\Anaconda3\envs\dog-project\lib\site-packages\tensorflow\python\client\session.py</span> in <span class="ansi-cyan-fg">_do_call</span><span class="ansi-blue-intense-fg ansi-bold">(self, fn, *args)</span>
-<span class="ansi-green-fg">   1333</span>         <span class="ansi-green-intense-fg ansi-bold">except</span> KeyError<span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">   1334</span>           <span class="ansi-green-intense-fg ansi-bold">pass</span>
-<span class="ansi-green-intense-fg ansi-bold">-&gt; 1335</span><span class="ansi-yellow-intense-fg ansi-bold">       </span><span class="ansi-green-intense-fg ansi-bold">raise</span> type<span class="ansi-yellow-intense-fg ansi-bold">(</span>e<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">(</span>node_def<span class="ansi-yellow-intense-fg ansi-bold">,</span> op<span class="ansi-yellow-intense-fg ansi-bold">,</span> message<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">   1336</span> 
-<span class="ansi-green-fg">   1337</span>   <span class="ansi-green-intense-fg ansi-bold">def</span> _extend_graph<span class="ansi-yellow-intense-fg ansi-bold">(</span>self<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-
-<span class="ansi-red-intense-fg ansi-bold">InternalError</span>: Blas GEMM launch failed : a.shape=(10, 556), b.shape=(556, 1024), m=10, n=1024, k=556
-	 [[Node: rnn/while/rnn/multi_rnn_cell/cell_0/basic_lstm_cell/MatMul = MatMul[T=DT_FLOAT, transpose_a=false, transpose_b=false, _device=&#34;/job:localhost/replica:0/task:0/device:GPU:0&#34;](rnn/while/rnn/multi_rnn_cell/cell_0/basic_lstm_cell/concat, rnn/while/rnn/multi_rnn_cell/cell_0/basic_lstm_cell/MatMul/Enter)]]
-	 [[Node: sequence_loss/truediv/_53 = _Recv[client_terminated=false, recv_device=&#34;/job:localhost/replica:0/task:0/device:CPU:0&#34;, send_device=&#34;/job:localhost/replica:0/task:0/device:GPU:0&#34;, send_device_incarnation=1, tensor_name=&#34;edge_1091_sequence_loss/truediv&#34;, tensor_type=DT_FLOAT, _device=&#34;/job:localhost/replica:0/task:0/device:CPU:0&#34;]()]]
-
-Caused by op &#39;rnn/while/rnn/multi_rnn_cell/cell_0/basic_lstm_cell/MatMul&#39;, defined at:
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\runpy.py&#34;, line 193, in _run_module_as_main
-    &#34;__main__&#34;, mod_spec)
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\runpy.py&#34;, line 85, in _run_code
-    exec(code, run_globals)
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\ipykernel\__main__.py&#34;, line 3, in &lt;module&gt;
-    app.launch_new_instance()
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\traitlets\config\application.py&#34;, line 658, in launch_instance
-    app.start()
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\ipykernel\kernelapp.py&#34;, line 486, in start
-    self.io_loop.start()
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\tornado\platform\asyncio.py&#34;, line 127, in start
-    self.asyncio_loop.run_forever()
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\asyncio\base_events.py&#34;, line 421, in run_forever
-    self._run_once()
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\asyncio\base_events.py&#34;, line 1425, in _run_once
-    handle._run()
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\asyncio\events.py&#34;, line 127, in _run
-    self._callback(*self._args)
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\tornado\platform\asyncio.py&#34;, line 117, in _handle_events
-    handler_func(fileobj, events)
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\tornado\stack_context.py&#34;, line 276, in null_wrapper
-    return fn(*args, **kwargs)
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\zmq\eventloop\zmqstream.py&#34;, line 450, in _handle_events
-    self._handle_recv()
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\zmq\eventloop\zmqstream.py&#34;, line 480, in _handle_recv
-    self._run_callback(callback, msg)
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\zmq\eventloop\zmqstream.py&#34;, line 432, in _run_callback
-    callback(*args, **kwargs)
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\tornado\stack_context.py&#34;, line 276, in null_wrapper
-    return fn(*args, **kwargs)
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\ipykernel\kernelbase.py&#34;, line 283, in dispatcher
-    return self.dispatch_shell(stream, msg)
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\ipykernel\kernelbase.py&#34;, line 233, in dispatch_shell
-    handler(stream, idents, msg)
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\ipykernel\kernelbase.py&#34;, line 399, in execute_request
-    user_expressions, allow_stdin)
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\ipykernel\ipkernel.py&#34;, line 208, in do_execute
-    res = shell.run_cell(code, store_history=store_history, silent=silent)
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\ipykernel\zmqshell.py&#34;, line 537, in run_cell
-    return super(ZMQInteractiveShell, self).run_cell(*args, **kwargs)
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\IPython\core\interactiveshell.py&#34;, line 2662, in run_cell
-    raw_cell, store_history, silent, shell_futures)
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\IPython\core\interactiveshell.py&#34;, line 2785, in _run_cell
-    interactivity=interactivity, compiler=compiler, result=result)
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\IPython\core\interactiveshell.py&#34;, line 2903, in run_ast_nodes
-    if self.run_code(code, result):
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\IPython\core\interactiveshell.py&#34;, line 2963, in run_code
-    exec(code_obj, self.user_global_ns, self.user_ns)
-  File &#34;&lt;ipython-input-45-a80028b8415b&gt;&#34;, line 13, in &lt;module&gt;
-    logits, final_state = build_nn(cell, rnn_size, input_text, vocab_size, embed_dim)
-  File &#34;&lt;ipython-input-42-01c77b0317d9&gt;&#34;, line 13, in build_nn
-    outputs, finalstate = build_rnn(cell, embed)
-  File &#34;&lt;ipython-input-41-07e3908d4688&gt;&#34;, line 9, in build_rnn
-    outputs, final_state = tf.nn.dynamic_rnn(cell,inputs, dtype=tf.float32)
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\tensorflow\python\ops\rnn.py&#34;, line 627, in dynamic_rnn
-    dtype=dtype)
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\tensorflow\python\ops\rnn.py&#34;, line 824, in _dynamic_rnn_loop
-    swap_memory=swap_memory)
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\tensorflow\python\ops\control_flow_ops.py&#34;, line 3224, in while_loop
-    result = loop_context.BuildLoop(cond, body, loop_vars, shape_invariants)
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\tensorflow\python\ops\control_flow_ops.py&#34;, line 2956, in BuildLoop
-    pred, body, original_loop_vars, loop_vars, shape_invariants)
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\tensorflow\python\ops\control_flow_ops.py&#34;, line 2893, in _BuildLoop
-    body_result = body(*packed_vars_for_body)
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\tensorflow\python\ops\control_flow_ops.py&#34;, line 3194, in &lt;lambda&gt;
-    body = lambda i, lv: (i + 1, orig_body(*lv))
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\tensorflow\python\ops\rnn.py&#34;, line 795, in _time_step
-    (output, new_state) = call_cell()
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\tensorflow\python\ops\rnn.py&#34;, line 781, in &lt;lambda&gt;
-    call_cell = lambda: cell(input_t, state)
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\tensorflow\python\ops\rnn_cell_impl.py&#34;, line 232, in __call__
-    return super(RNNCell, self).__call__(inputs, state)
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\tensorflow\python\layers\base.py&#34;, line 717, in __call__
-    outputs = self.call(inputs, *args, **kwargs)
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\tensorflow\python\ops\rnn_cell_impl.py&#34;, line 1292, in call
-    cur_inp, new_state = cell(cur_inp, cur_state)
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\tensorflow\python\ops\rnn_cell_impl.py&#34;, line 339, in __call__
-    *args, **kwargs)
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\tensorflow\python\layers\base.py&#34;, line 717, in __call__
-    outputs = self.call(inputs, *args, **kwargs)
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\tensorflow\python\ops\rnn_cell_impl.py&#34;, line 620, in call
-    array_ops.concat([inputs, h], 1), self._kernel)
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\tensorflow\python\ops\math_ops.py&#34;, line 2122, in matmul
-    a, b, transpose_a=transpose_a, transpose_b=transpose_b, name=name)
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\tensorflow\python\ops\gen_math_ops.py&#34;, line 4567, in mat_mul
-    name=name)
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\tensorflow\python\framework\op_def_library.py&#34;, line 787, in _apply_op_helper
-    op_def=op_def)
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\tensorflow\python\framework\ops.py&#34;, line 3392, in create_op
-    op_def=op_def)
-  File &#34;C:\Users\Ramakrishna\Anaconda3\envs\dog-project\lib\site-packages\tensorflow\python\framework\ops.py&#34;, line 1718, in __init__
-    self._traceback = self._graph._extract_stack()  # pylint: disable=protected-access
-
-InternalError (see above for traceback): Blas GEMM launch failed : a.shape=(10, 556), b.shape=(556, 1024), m=10, n=1024, k=556
-	 [[Node: rnn/while/rnn/multi_rnn_cell/cell_0/basic_lstm_cell/MatMul = MatMul[T=DT_FLOAT, transpose_a=false, transpose_b=false, _device=&#34;/job:localhost/replica:0/task:0/device:GPU:0&#34;](rnn/while/rnn/multi_rnn_cell/cell_0/basic_lstm_cell/concat, rnn/while/rnn/multi_rnn_cell/cell_0/basic_lstm_cell/MatMul/Enter)]]
-	 [[Node: sequence_loss/truediv/_53 = _Recv[client_terminated=false, recv_device=&#34;/job:localhost/replica:0/task:0/device:CPU:0&#34;, send_device=&#34;/job:localhost/replica:0/task:0/device:GPU:0&#34;, send_device_incarnation=1, tensor_name=&#34;edge_1091_sequence_loss/truediv&#34;, tensor_type=DT_FLOAT, _device=&#34;/job:localhost/replica:0/task:0/device:CPU:0&#34;]()]]
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(100, 20)
+Epoch   0 Batch    0/34   train_loss = 8.822
+Epoch   2 Batch   32/34   train_loss = 8.149
+Epoch   5 Batch   30/34   train_loss = 8.138
+Epoch   8 Batch   28/34   train_loss = 8.133
+Epoch  11 Batch   26/34   train_loss = 8.127
+Epoch  14 Batch   24/34   train_loss = 8.108
+Epoch  17 Batch   22/34   train_loss = 8.121
+Model Trained and Saved
 </pre>
 </div>
 </div>
@@ -12949,7 +12814,7 @@ InternalError (see above for traceback): Blas GEMM launch failed : a.shape=(10, 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[89]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12974,7 +12839,7 @@ InternalError (see above for traceback): Blas GEMM launch failed : a.shape=(10, 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[90]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -13012,7 +12877,7 @@ InternalError (see above for traceback): Blas GEMM launch failed : a.shape=(10, 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[91]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_tensors</span><span class="p">(</span><span class="n">loaded_graph</span><span class="p">):</span>
@@ -13065,7 +12930,7 @@ InternalError (see above for traceback): Blas GEMM launch failed : a.shape=(10, 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[92]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">pick_word</span><span class="p">(</span><span class="n">probabilities</span><span class="p">,</span> <span class="n">int_to_vocab</span><span class="p">):</span>
@@ -13107,6 +12972,7 @@ InternalError (see above for traceback): Blas GEMM launch failed : a.shape=(10, 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[0.1  0.8  0.05 0.05]
 0
+1
 Tests Passed
 </pre>
 </div>
@@ -13127,7 +12993,7 @@ Tests Passed
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[93]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">gen_length</span> <span class="o">=</span> <span class="mi">200</span>
@@ -13189,32 +13055,570 @@ Tests Passed
 <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">OSError</span>                                   Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-51-f459c6924e4f&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
-<span class="ansi-green-fg">      9</span> <span class="ansi-green-intense-fg ansi-bold">with</span> tf<span class="ansi-yellow-intense-fg ansi-bold">.</span>Session<span class="ansi-yellow-intense-fg ansi-bold">(</span>graph<span class="ansi-yellow-intense-fg ansi-bold">=</span>loaded_graph<span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-green-intense-fg ansi-bold">as</span> sess<span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">     10</span>     <span class="ansi-red-intense-fg ansi-bold"># Load saved model</span>
-<span class="ansi-green-intense-fg ansi-bold">---&gt; 11</span><span class="ansi-yellow-intense-fg ansi-bold">     </span>loader <span class="ansi-yellow-intense-fg ansi-bold">=</span> tf<span class="ansi-yellow-intense-fg ansi-bold">.</span>train<span class="ansi-yellow-intense-fg ansi-bold">.</span>import_meta_graph<span class="ansi-yellow-intense-fg ansi-bold">(</span>load_dir <span class="ansi-yellow-intense-fg ansi-bold">+</span> <span class="ansi-blue-intense-fg ansi-bold">&#39;.meta&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">     12</span>     loader<span class="ansi-yellow-intense-fg ansi-bold">.</span>restore<span class="ansi-yellow-intense-fg ansi-bold">(</span>sess<span class="ansi-yellow-intense-fg ansi-bold">,</span> load_dir<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">     13</span> 
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>INFO:tensorflow:Restoring parameters from ./save
+[0.00036356 0.00036324 0.00036345 ... 0.00013426 0.0001343  0.00013406]
+0
+[0.00036466 0.00036463 0.00036466 ... 0.00013422 0.00013423 0.00013419]
+0
+1
+[0.00036478 0.00036477 0.00036478 ... 0.00013422 0.00013422 0.00013421]
+0
+1
+[0.00036485 0.00036484 0.00036485 ... 0.00013423 0.00013424 0.00013423]
+0
+[0.00036479 0.00036477 0.00036478 ... 0.00013423 0.00013423 0.00013421]
+0
+1
+2
+[0.00036469 0.00036466 0.00036467 ... 0.00013422 0.00013422 0.00013419]
+0
+[0.00036461 0.00036456 0.0003646  ... 0.00013423 0.00013425 0.00013419]
+0
+1
+[0.00036477 0.00036475 0.00036477 ... 0.00013422 0.00013422 0.0001342 ]
+0
+1
+[0.00036474 0.00036471 0.00036473 ... 0.00013422 0.00013422 0.0001342 ]
+0
+[0.00036482 0.00036481 0.00036482 ... 0.00013424 0.00013425 0.00013422]
+0
+[0.00036483 0.0003648  0.00036483 ... 0.00013425 0.00013425 0.00013423]
+0
+[0.00036482 0.0003648  0.00036482 ... 0.00013424 0.00013425 0.00013423]
+0
+[0.00036458 0.00036451 0.00036456 ... 0.00013423 0.00013423 0.00013418]
+0
+[0.0003648  0.00036479 0.0003648  ... 0.00013424 0.00013424 0.00013422]
+0
+1
+2
+3
+4
+[0.00036478 0.00036477 0.00036477 ... 0.00013422 0.00013422 0.0001342 ]
+0
+1
+2
+3
+[0.00036478 0.00036475 0.00036477 ... 0.00013424 0.00013424 0.00013422]
+0
+1
+2
+3
+[0.00036474 0.00036471 0.00036473 ... 0.00013422 0.00013423 0.0001342 ]
+0
+1
+[0.00036478 0.00036477 0.00036478 ... 0.00013423 0.00013424 0.00013421]
+0
+1
+2
+[0.00036476 0.00036476 0.00036476 ... 0.0001342  0.0001342  0.0001342 ]
+0
+1
+[0.00036478 0.00036477 0.00036478 ... 0.00013422 0.00013422 0.0001342 ]
+0
+1
+[0.00036482 0.0003648  0.00036481 ... 0.00013424 0.00013424 0.00013422]
+0
+[0.00036477 0.00036475 0.00036476 ... 0.00013422 0.00013422 0.0001342 ]
+0
+1
+[0.00036479 0.00036476 0.00036478 ... 0.00013424 0.00013424 0.00013422]
+0
+[0.00036479 0.00036478 0.00036479 ... 0.00013422 0.00013422 0.00013421]
+0
+1
+[0.0003648  0.00036478 0.0003648  ... 0.00013424 0.00013425 0.00013422]
+0
+[0.00036478 0.00036476 0.00036477 ... 0.00013425 0.00013425 0.00013422]
+0
+[0.00036482 0.00036481 0.00036482 ... 0.00013424 0.00013424 0.00013422]
+0
+[0.0003648  0.00036478 0.0003648  ... 0.00013423 0.00013423 0.00013422]
+0
+[0.0003648  0.00036479 0.00036479 ... 0.00013422 0.00013423 0.00013421]
+0
+1
+2
+[0.00036481 0.0003648  0.00036481 ... 0.00013423 0.00013423 0.00013422]
+0
+[0.00036478 0.00036475 0.00036477 ... 0.00013423 0.00013423 0.00013421]
+0
+[0.00036476 0.00036473 0.00036475 ... 0.00013424 0.00013424 0.00013421]
+0
+[0.0003648  0.00036478 0.00036479 ... 0.00013424 0.00013424 0.00013422]
+0
+[0.00036477 0.00036476 0.00036477 ... 0.00013422 0.00013422 0.00013421]
+0
+[0.00036473 0.00036471 0.00036472 ... 0.00013423 0.00013424 0.0001342 ]
+0
+[0.00036465 0.00036459 0.00036465 ... 0.00013425 0.00013424 0.0001342 ]
+0
+[0.00036484 0.00036482 0.00036483 ... 0.00013425 0.00013425 0.00013423]
+0
+1
+2
+3
+[0.00036482 0.0003648  0.00036481 ... 0.00013423 0.00013423 0.00013422]
+0
+1
+2
+[0.00036479 0.00036477 0.00036479 ... 0.00013423 0.00013422 0.00013421]
+0
+[0.00036467 0.00036463 0.00036466 ... 0.00013422 0.00013422 0.00013419]
+0
+[0.00036471 0.00036467 0.00036469 ... 0.00013424 0.00013422 0.00013421]
+0
+1
+[0.00036481 0.0003648  0.00036481 ... 0.00013423 0.00013424 0.00013422]
+0
+[0.00036485 0.00036483 0.00036485 ... 0.00013425 0.00013425 0.00013424]
+0
+[0.00036483 0.00036482 0.00036483 ... 0.00013425 0.00013425 0.00013423]
+0
+[0.00036479 0.00036477 0.00036478 ... 0.00013423 0.00013424 0.00013421]
+0
+1
+[0.00036486 0.00036485 0.00036486 ... 0.00013424 0.00013424 0.00013423]
+0
+1
+[0.00036478 0.00036475 0.00036477 ... 0.00013423 0.00013423 0.00013421]
+0
+1
+[0.00036482 0.0003648  0.00036481 ... 0.00013424 0.00013424 0.00013422]
+0
+[0.00036483 0.00036481 0.00036482 ... 0.00013424 0.00013425 0.00013423]
+0
+1
+[0.00036481 0.00036479 0.0003648  ... 0.00013424 0.00013425 0.00013423]
+0
+[0.00036475 0.00036473 0.00036475 ... 0.00013421 0.00013421 0.0001342 ]
+0
+[0.00036485 0.00036484 0.00036485 ... 0.00013424 0.00013424 0.00013423]
+0
+[0.00036475 0.00036469 0.00036473 ... 0.00013424 0.00013425 0.00013422]
+0
+[0.00036474 0.0003647  0.00036473 ... 0.00013424 0.00013424 0.00013421]
+0
+1
+[0.00036483 0.00036481 0.00036483 ... 0.00013425 0.00013426 0.00013423]
+0
+[0.00036483 0.00036482 0.00036483 ... 0.00013423 0.00013424 0.00013422]
+0
+1
+2
+[0.00036478 0.00036475 0.00036477 ... 0.00013423 0.00013424 0.00013421]
+0
+1
+[0.00036478 0.00036476 0.00036478 ... 0.00013423 0.00013423 0.00013421]
+0
+[0.00036475 0.00036472 0.00036474 ... 0.00013425 0.00013425 0.00013421]
+0
+1
+[0.00036465 0.00036461 0.00036465 ... 0.00013424 0.00013424 0.00013419]
+0
+[0.00036485 0.00036484 0.00036485 ... 0.00013425 0.00013425 0.00013423]
+0
+[0.00036479 0.00036477 0.00036479 ... 0.00013423 0.00013423 0.00013421]
+0
+1
+[0.00036478 0.00036477 0.00036478 ... 0.00013424 0.00013424 0.00013422]
+0
+[0.0003648  0.00036478 0.0003648  ... 0.00013424 0.00013423 0.00013422]
+0
+[0.00036479 0.00036477 0.00036478 ... 0.00013424 0.00013425 0.00013422]
+0
+[0.00036474 0.00036472 0.00036474 ... 0.00013421 0.00013421 0.00013419]
+0
+1
+[0.00036479 0.00036476 0.00036479 ... 0.00013425 0.00013426 0.00013422]
+0
+1
+2
+[0.00036482 0.0003648  0.00036481 ... 0.00013423 0.00013424 0.00013422]
+0
+[0.00036484 0.00036483 0.00036483 ... 0.00013424 0.00013425 0.00013423]
+0
+1
+2
+3
+4
+[0.00036481 0.0003648  0.00036481 ... 0.00013423 0.00013423 0.00013422]
+0
+1
+[0.00036479 0.00036478 0.00036479 ... 0.00013422 0.00013422 0.00013421]
+0
+[0.00036481 0.00036478 0.0003648  ... 0.00013424 0.00013425 0.00013423]
+0
+1
+[0.00036482 0.00036479 0.00036481 ... 0.00013427 0.00013427 0.00013424]
+0
+[0.00036472 0.00036468 0.00036471 ... 0.00013423 0.00013423 0.0001342 ]
+0
+[0.00036479 0.00036478 0.00036479 ... 0.00013423 0.00013423 0.00013421]
+0
+[0.00036475 0.00036472 0.00036474 ... 0.00013424 0.00013423 0.00013421]
+0
+[0.00036476 0.00036473 0.00036475 ... 0.00013423 0.00013424 0.00013421]
+0
+1
+[0.00036475 0.00036473 0.00036475 ... 0.00013422 0.00013422 0.0001342 ]
+0
+[0.00036474 0.00036472 0.00036474 ... 0.00013424 0.00013422 0.0001342 ]
+0
+1
+[0.00036477 0.00036476 0.00036477 ... 0.00013422 0.00013421 0.0001342 ]
+0
+[0.00036477 0.00036474 0.00036476 ... 0.00013424 0.00013424 0.00013421]
+0
+1
+2
+3
+[0.00036481 0.00036479 0.0003648  ... 0.00013423 0.00013423 0.00013422]
+0
+[0.00036478 0.00036476 0.00036477 ... 0.00013423 0.00013423 0.00013421]
+0
+[0.00036478 0.00036476 0.00036477 ... 0.00013423 0.00013423 0.00013421]
+0
+[0.00036483 0.0003648  0.00036482 ... 0.00013425 0.00013426 0.00013423]
+0
+[0.00036477 0.00036475 0.00036476 ... 0.00013422 0.00013422 0.0001342 ]
+0
+1
+[0.00036477 0.00036473 0.00036476 ... 0.00013424 0.00013426 0.00013422]
+0
+[0.00036477 0.00036475 0.00036477 ... 0.00013423 0.00013423 0.00013421]
+0
+[0.00036476 0.00036473 0.00036475 ... 0.00013423 0.00013424 0.00013421]
+0
+1
+[0.00036481 0.00036479 0.0003648  ... 0.00013424 0.00013424 0.00013422]
+0
+[0.00036477 0.00036473 0.00036477 ... 0.00013424 0.00013424 0.00013421]
+0
+1
+2
+[0.00036481 0.00036479 0.00036481 ... 0.00013424 0.00013425 0.00013422]
+0
+[0.00036481 0.0003648  0.0003648  ... 0.00013423 0.00013423 0.00013422]
+0
+[0.00036483 0.00036481 0.00036483 ... 0.00013424 0.00013424 0.00013422]
+0
+[0.0003648  0.00036478 0.0003648  ... 0.00013422 0.00013422 0.00013421]
+0
+[0.0003647  0.00036466 0.00036469 ... 0.00013423 0.00013424 0.0001342 ]
+0
+[0.00036473 0.00036469 0.00036471 ... 0.00013424 0.00013425 0.00013421]
+0
+1
+[0.00036476 0.00036475 0.00036476 ... 0.00013422 0.00013422 0.0001342 ]
+0
+1
+2
+[0.00036476 0.00036474 0.00036476 ... 0.00013423 0.00013423 0.00013421]
+0
+[0.00036472 0.00036469 0.00036471 ... 0.00013422 0.00013422 0.0001342 ]
+0
+1
+[0.00036478 0.00036477 0.00036478 ... 0.00013422 0.00013422 0.00013421]
+0
+1
+[0.00036482 0.0003648  0.00036481 ... 0.00013424 0.00013424 0.00013422]
+0
+1
+[0.0003648  0.00036477 0.00036479 ... 0.00013425 0.00013423 0.00013422]
+0
+[0.00036478 0.00036476 0.00036477 ... 0.00013423 0.00013423 0.00013421]
+0
+[0.00036471 0.00036466 0.0003647  ... 0.00013424 0.00013424 0.00013421]
+0
+[0.00036475 0.00036473 0.00036475 ... 0.00013422 0.00013422 0.0001342 ]
+0
+1
+[0.00036481 0.0003648  0.00036481 ... 0.00013423 0.00013423 0.00013422]
+0
+[0.00036476 0.00036474 0.00036476 ... 0.00013422 0.00013422 0.0001342 ]
+0
+1
+[0.00036478 0.00036476 0.00036478 ... 0.00013422 0.00013423 0.00013421]
+0
+[0.0003648  0.00036476 0.0003648  ... 0.00013425 0.00013424 0.00013422]
+0
+1
+[0.00036479 0.00036476 0.00036478 ... 0.00013424 0.00013425 0.00013422]
+0
+[0.0003648  0.00036479 0.0003648  ... 0.00013422 0.00013422 0.00013421]
+0
+[0.00036474 0.00036471 0.00036474 ... 0.00013423 0.00013423 0.0001342 ]
+0
+[0.00036481 0.00036478 0.0003648  ... 0.00013424 0.00013425 0.00013422]
+0
+[0.00036472 0.00036468 0.00036471 ... 0.00013424 0.00013424 0.00013421]
+0
+[0.0003648  0.00036478 0.00036479 ... 0.00013423 0.00013423 0.00013421]
+0
+1
+[0.0003648  0.00036478 0.00036479 ... 0.00013423 0.00013424 0.00013422]
+0
+1
+2
+[0.00036473 0.00036471 0.00036472 ... 0.00013424 0.00013424 0.00013421]
+0
+[0.00036467 0.00036462 0.00036466 ... 0.00013422 0.00013423 0.00013419]
+0
+[0.00036481 0.00036479 0.0003648  ... 0.00013423 0.00013423 0.00013422]
+0
+1
+2
+[0.00036481 0.00036479 0.0003648  ... 0.00013423 0.00013423 0.00013422]
+0
+1
+2
+3
+4
+5
+[0.00036483 0.00036481 0.00036482 ... 0.00013423 0.00013424 0.00013422]
+0
+[0.00036482 0.0003648  0.00036481 ... 0.00013423 0.00013424 0.00013422]
+0
+[0.00036483 0.00036481 0.00036483 ... 0.00013424 0.00013425 0.00013423]
+0
+[0.0003648  0.00036477 0.00036478 ... 0.00013424 0.00013424 0.00013422]
+0
+[0.00036461 0.00036455 0.00036461 ... 0.00013422 0.00013422 0.00013418]
+0
+[0.00036479 0.00036477 0.00036478 ... 0.00013423 0.00013423 0.00013421]
+0
+[0.00036476 0.00036474 0.00036475 ... 0.00013422 0.00013423 0.00013421]
+0
+[0.0003648  0.00036478 0.0003648  ... 0.00013424 0.00013425 0.00013422]
+0
+[0.0003648  0.00036478 0.0003648  ... 0.00013424 0.00013424 0.00013422]
+0
+[0.00036481 0.00036479 0.0003648  ... 0.00013422 0.00013423 0.00013422]
+0
+[0.0003648  0.00036478 0.00036479 ... 0.00013423 0.00013423 0.00013421]
+0
+1
+[0.00036479 0.00036477 0.00036478 ... 0.00013423 0.00013424 0.00013421]
+0
+[0.00036465 0.00036462 0.00036464 ... 0.00013425 0.00013423 0.0001342 ]
+0
+[0.00036477 0.00036473 0.00036476 ... 0.00013425 0.00013424 0.00013422]
+0
+[0.00036483 0.00036481 0.00036482 ... 0.00013423 0.00013424 0.00013422]
+0
+1
+2
+3
+4
+5
+6
+[0.0003648  0.00036477 0.00036479 ... 0.00013424 0.00013424 0.00013422]
+0
+[0.0003648  0.00036479 0.0003648  ... 0.00013423 0.00013423 0.00013422]
+0
+[0.00036483 0.0003648  0.00036482 ... 0.00013425 0.00013425 0.00013423]
+0
+[0.00036477 0.00036474 0.00036477 ... 0.00013424 0.00013423 0.00013421]
+0
+[0.00036476 0.00036474 0.00036475 ... 0.00013422 0.00013423 0.00013421]
+0
+[0.00036479 0.00036478 0.00036479 ... 0.00013423 0.00013423 0.00013421]
+0
+[0.00036482 0.00036479 0.00036481 ... 0.00013424 0.00013425 0.00013422]
+0
+[0.00036474 0.00036471 0.00036473 ... 0.00013423 0.00013423 0.0001342 ]
+0
+[0.00036482 0.0003648  0.00036481 ... 0.00013424 0.00013424 0.00013422]
+0
+[0.00036475 0.00036473 0.00036474 ... 0.00013422 0.00013423 0.0001342 ]
+0
+[0.00036482 0.00036481 0.00036482 ... 0.00013422 0.00013423 0.00013422]
+0
+[0.00036481 0.00036479 0.0003648  ... 0.00013423 0.00013423 0.00013422]
+0
+[0.00036477 0.00036475 0.00036476 ... 0.00013422 0.00013422 0.0001342 ]
+0
+1
+[0.0003648  0.00036479 0.00036479 ... 0.00013422 0.00013422 0.00013421]
+0
+[0.00036479 0.00036478 0.00036478 ... 0.00013422 0.00013422 0.00013421]
+0
+1
+2
+[0.00036477 0.00036475 0.00036476 ... 0.00013422 0.00013422 0.0001342 ]
+0
+[0.00036464 0.00036459 0.00036463 ... 0.00013422 0.00013423 0.00013419]
+0
+[0.00036466 0.00036461 0.00036465 ... 0.0001342  0.00013423 0.00013419]
+0
+[0.0003648  0.00036478 0.0003648  ... 0.00013424 0.00013424 0.00013422]
+0
+[0.00036474 0.00036471 0.00036473 ... 0.00013422 0.00013422 0.0001342 ]
+0
+[0.00036479 0.00036477 0.00036479 ... 0.00013424 0.00013423 0.00013422]
+0
+1
+[0.00036475 0.00036473 0.00036474 ... 0.00013422 0.00013424 0.00013421]
+0
+1
+[0.00036479 0.00036478 0.00036479 ... 0.00013423 0.00013422 0.00013421]
+0
+1
+[0.0003648  0.0003648  0.0003648  ... 0.00013422 0.00013422 0.00013421]
+0
+[0.00036472 0.0003647  0.00036471 ... 0.0001342  0.00013421 0.00013419]
+0
+[0.00036482 0.0003648  0.00036482 ... 0.00013425 0.00013424 0.00013423]
+0
+[0.00036479 0.00036476 0.00036478 ... 0.00013424 0.00013425 0.00013422]
+0
+1
+[0.00036486 0.00036485 0.00036486 ... 0.00013425 0.00013425 0.00013424]
+0
+[0.00036476 0.00036473 0.00036475 ... 0.00013423 0.00013424 0.00013421]
+0
+1
+[0.00036477 0.00036475 0.00036477 ... 0.00013423 0.00013424 0.00013421]
+0
+[0.0003648  0.00036478 0.00036479 ... 0.00013423 0.00013423 0.00013421]
+0
+1
+2
+3
+[0.00036479 0.00036478 0.00036478 ... 0.00013424 0.00013424 0.00013421]
+0
+[0.00036471 0.00036466 0.00036469 ... 0.00013423 0.00013424 0.0001342 ]
+0
+[0.00036469 0.00036465 0.00036469 ... 0.00013424 0.00013425 0.00013421]
+0
+1
+[0.00036477 0.00036475 0.00036477 ... 0.00013426 0.00013425 0.00013423]
+0
+1
+[0.00036479 0.00036478 0.00036479 ... 0.00013423 0.00013423 0.00013421]
+0
+[0.00036474 0.00036471 0.00036474 ... 0.00013426 0.00013425 0.00013422]
+0
+[0.00036484 0.00036483 0.00036484 ... 0.00013424 0.00013424 0.00013423]
+0
+[0.00036468 0.00036463 0.00036466 ... 0.00013425 0.00013425 0.00013421]
+0
+1
+[0.00036474 0.00036472 0.00036474 ... 0.00013423 0.00013423 0.0001342 ]
+0
+1
+[0.00036482 0.0003648  0.00036482 ... 0.00013424 0.00013424 0.00013422]
+0
+[0.00036483 0.0003648  0.00036482 ... 0.00013424 0.00013424 0.00013423]
+0
+1
+[0.00036481 0.00036479 0.0003648  ... 0.00013423 0.00013423 0.00013422]
+0
+[0.00036479 0.00036477 0.00036478 ... 0.00013422 0.00013423 0.00013421]
+0
+[0.00036479 0.00036478 0.00036479 ... 0.00013422 0.00013422 0.00013421]
+0
+[0.00036483 0.00036482 0.00036483 ... 0.00013424 0.00013424 0.00013423]
+0
+[0.00036478 0.00036476 0.00036477 ... 0.00013422 0.00013422 0.00013421]
+0
+[0.00036483 0.00036481 0.00036483 ... 0.00013425 0.00013426 0.00013423]
+0
+[0.00036472 0.00036469 0.00036471 ... 0.00013422 0.00013423 0.0001342 ]
+0
+[0.00036481 0.0003648  0.00036481 ... 0.00013423 0.00013423 0.00013422]
+0
+[0.00036475 0.00036473 0.00036474 ... 0.00013422 0.00013421 0.0001342 ]
+0
+[0.00036484 0.00036482 0.00036483 ... 0.00013424 0.00013424 0.00013423]
+0
+1
+[0.00036484 0.00036482 0.00036483 ... 0.00013424 0.00013424 0.00013422]
+0
+1
+2
+[0.00036471 0.00036468 0.0003647  ... 0.00013421 0.00013422 0.00013419]
+0
+[0.00036481 0.00036479 0.0003648  ... 0.00013424 0.00013424 0.00013422]
+0
+1
+[0.00036483 0.00036479 0.00036482 ... 0.00013427 0.00013426 0.00013423]
+0
+1
+2
+[0.00036477 0.00036474 0.00036476 ... 0.00013424 0.00013425 0.00013422]
+0
+1
+2
+[0.00036483 0.00036481 0.00036483 ... 0.00013425 0.00013426 0.00013423]
+0
+[0.00036481 0.00036479 0.00036481 ... 0.00013423 0.00013423 0.00013422]
+0
+1
+[0.00036476 0.00036473 0.00036475 ... 0.00013423 0.00013423 0.00013421]
+0
+[0.00036479 0.00036477 0.00036479 ... 0.00013424 0.00013424 0.00013422]
+0
+[0.00036479 0.00036477 0.00036479 ... 0.00013422 0.00013422 0.00013421]
+0
+1
+[0.00036479 0.00036477 0.00036478 ... 0.00013423 0.00013422 0.00013421]
+0
+[0.00036466 0.00036464 0.00036465 ... 0.00013421 0.00013422 0.00013419]
+0
+moe_szyslak:.
 
-<span class="ansi-green-intense-fg ansi-bold">~\Anaconda3\envs\dog-project\lib\site-packages\tensorflow\python\training\saver.py</span> in <span class="ansi-cyan-fg">import_meta_graph</span><span class="ansi-blue-intense-fg ansi-bold">(meta_graph_or_file, clear_devices, import_scope, **kwargs)</span>
-<span class="ansi-green-fg">   1945</span>                        &#34;execution is enabled.&#34;)
-<span class="ansi-green-fg">   1946</span>   <span class="ansi-green-intense-fg ansi-bold">if</span> <span class="ansi-green-intense-fg ansi-bold">not</span> isinstance<span class="ansi-yellow-intense-fg ansi-bold">(</span>meta_graph_or_file<span class="ansi-yellow-intense-fg ansi-bold">,</span> meta_graph_pb2<span class="ansi-yellow-intense-fg ansi-bold">.</span>MetaGraphDef<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-intense-fg ansi-bold">-&gt; 1947</span><span class="ansi-yellow-intense-fg ansi-bold">     </span>meta_graph_def <span class="ansi-yellow-intense-fg ansi-bold">=</span> meta_graph<span class="ansi-yellow-intense-fg ansi-bold">.</span>read_meta_graph_file<span class="ansi-yellow-intense-fg ansi-bold">(</span>meta_graph_or_file<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">   1948</span>   <span class="ansi-green-intense-fg ansi-bold">else</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">   1949</span>     meta_graph_def <span class="ansi-yellow-intense-fg ansi-bold">=</span> meta_graph_or_file
+.,.
 
-<span class="ansi-green-intense-fg ansi-bold">~\Anaconda3\envs\dog-project\lib\site-packages\tensorflow\python\framework\meta_graph.py</span> in <span class="ansi-cyan-fg">read_meta_graph_file</span><span class="ansi-blue-intense-fg ansi-bold">(filename)</span>
-<span class="ansi-green-fg">    630</span>   meta_graph_def <span class="ansi-yellow-intense-fg ansi-bold">=</span> meta_graph_pb2<span class="ansi-yellow-intense-fg ansi-bold">.</span>MetaGraphDef<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">    631</span>   <span class="ansi-green-intense-fg ansi-bold">if</span> <span class="ansi-green-intense-fg ansi-bold">not</span> file_io<span class="ansi-yellow-intense-fg ansi-bold">.</span>file_exists<span class="ansi-yellow-intense-fg ansi-bold">(</span>filename<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 632</span><span class="ansi-yellow-intense-fg ansi-bold">     </span><span class="ansi-green-intense-fg ansi-bold">raise</span> IOError<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#34;File %s does not exist.&#34;</span> <span class="ansi-yellow-intense-fg ansi-bold">%</span> filename<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">    633</span>   <span class="ansi-red-intense-fg ansi-bold"># First try to read it as a binary file.</span>
-<span class="ansi-green-fg">    634</span>   file_content <span class="ansi-yellow-intense-fg ansi-bold">=</span> file_io<span class="ansi-yellow-intense-fg ansi-bold">.</span>FileIO<span class="ansi-yellow-intense-fg ansi-bold">(</span>filename<span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-blue-intense-fg ansi-bold">&#34;rb&#34;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">.</span>read<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+.....)((
+,
 
-<span class="ansi-red-intense-fg ansi-bold">OSError</span>: File ./save.meta does not exist.</pre>
+.
+.
+....,.......(,..
+...
+
+
+.
+....
+.,
+.
+..
+...
+,.)
+.
+....
+.
+.(....
+..
+.,.....
+,.
+
+
+...
+.
+.
+.....
+,.., the..........
+... i............
+.,.....
+
+
+...
+.
+.(..
+
+...
+
+.
+.........
+,.
+,,.
+..
+..
+</pre>
 </div>
 </div>
 
